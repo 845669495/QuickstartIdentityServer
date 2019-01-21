@@ -18,6 +18,7 @@ namespace QuickstartIdentityServer
             // 使用内存存储，密钥，客户端和资源来配置身份服务器。
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
+                .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApiResources())//添加api资源
                 .AddInMemoryClients(Config.GetClients())//添加客户端
                 .AddTestUsers(Config.GetUsers()); //添加测试用户

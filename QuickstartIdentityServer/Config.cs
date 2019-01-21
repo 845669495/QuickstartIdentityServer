@@ -1,4 +1,5 @@
-﻿using IdentityServer4.Models;
+﻿using IdentityServer4;
+using IdentityServer4.Models;
 using IdentityServer4.Test;
 using System;
 using System.Collections.Generic;
@@ -18,37 +19,65 @@ namespace QuickstartIdentityServer
             };
         }
 
+        public static IEnumerable<IdentityResource> GetIdentityResources()
+        {
+            return new List<IdentityResource>
+            {
+                new IdentityResources.OpenId(),
+                new IdentityResources.Profile(),
+            };
+        }
+
         // client want to access resources (aka scopes)
         public static IEnumerable<Client> GetClients()
         {
             return new List<Client>
-    {
-        new Client
-        {
-            ClientId = "client",
-            // 没有交互性用户，使用 clientid/secret 实现认证。
-            AllowedGrantTypes = GrantTypes.ClientCredentials,
-            // 用于认证的密码
-            ClientSecrets =
             {
-                new Secret("secret".Sha256())
-            },
-            // 客户端有权访问的范围（Scopes）
-            AllowedScopes = { "api1" }
-        },
-        // resource owner password grant client
-        new Client
-        {
-            ClientId = "ro.client",
-            AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                new Client
+                {
+                    ClientId = "client",
+                    // 没有交互性用户，使用 clientid/secret 实现认证。
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    // 用于认证的密码
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    },
+                    // 客户端有权访问的范围（Scopes）
+                    AllowedScopes = { "api1" }
+                },
+                // resource owner password grant client
+                new Client
+                {
+                    ClientId = "ro.client",
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
 
-            ClientSecrets =
-            {
-                new Secret("secret".Sha256())
-            },
-            AllowedScopes = { "api1" }
-        }
-    };
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    },
+                    AllowedScopes = { "api1" }
+                },
+                // OpenID Connect implicit flow client (MVC)
+                new Client
+                {
+                    ClientId = "mvc",
+                    ClientName = "MVC Client",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+
+                    // where to redirect to after login
+                    RedirectUris = { "http://localhost:5002/signin-oidc" },
+
+                    // where to redirect to after logout
+                    PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
+
+                    AllowedScopes = new List<string>
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile
+                    }
+                }
+            };
         }
 
         public static List<TestUser> GetUsers()

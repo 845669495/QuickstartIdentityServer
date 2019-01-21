@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickstartIdentityServer", "QuickstartIdentityServer\QuickstartIdentityServer.csproj", "{8F125344-2C19-4BA6-BDD0-2A6391E9770A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickstartIdentityServer", "QuickstartIdentityServer\QuickstartIdentityServer.csproj", "{8F125344-2C19-4BA6-BDD0-2A6391E9770A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{5D2BA125-1FA9-43A9-9C58-F3D33F95100B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{5D2BA125-1FA9-43A9-9C58-F3D33F95100B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{92B5C67F-929D-4D60-ADE1-4F47BF500245}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{92B5C67F-929D-4D60-ADE1-4F47BF500245}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCClient", "MVCClient\MVCClient.csproj", "{0AD9DFE6-5337-465D-B83E-8EE28526BF6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{92B5C67F-929D-4D60-ADE1-4F47BF500245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92B5C67F-929D-4D60-ADE1-4F47BF500245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92B5C67F-929D-4D60-ADE1-4F47BF500245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD9DFE6-5337-465D-B83E-8EE28526BF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD9DFE6-5337-465D-B83E-8EE28526BF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD9DFE6-5337-465D-B83E-8EE28526BF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD9DFE6-5337-465D-B83E-8EE28526BF6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

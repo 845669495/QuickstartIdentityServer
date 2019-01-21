@@ -49,6 +49,7 @@ namespace Api
             }
 
             app.UseAuthentication();
+
             app.UseMvc();
         }
     }
