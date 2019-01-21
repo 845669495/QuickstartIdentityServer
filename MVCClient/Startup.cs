@@ -69,8 +69,7 @@ namespace MVCClient
             app.UseAuthentication();
 
             app.UseStaticFiles();
-            app.UseCookiePolicy();
-
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
