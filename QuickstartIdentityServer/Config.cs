@@ -35,6 +35,18 @@ namespace QuickstartIdentityServer
             },
             // 客户端有权访问的范围（Scopes）
             AllowedScopes = { "api1" }
+        },
+        // resource owner password grant client
+        new Client
+        {
+            ClientId = "ro.client",
+            AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+
+            ClientSecrets =
+            {
+                new Secret("secret".Sha256())
+            },
+            AllowedScopes = { "api1" }
         }
     };
         }

@@ -22,13 +22,25 @@ namespace Client
                 return;
             }
 
-            // request token
-            var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
+            // request token（ClientCredentials）
+            //var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
+            //{
+            //    Address = disco.TokenEndpoint,
+            //    ClientId = "client",
+            //    ClientSecret = "secret",
+
+            //    Scope = "api1"
+            //});
+
+            // request token（ResourceOwnerPassword）
+            var tokenResponse = await client.RequestPasswordTokenAsync(new PasswordTokenRequest
             {
                 Address = disco.TokenEndpoint,
-                ClientId = "client",
+                ClientId = "ro.client",
                 ClientSecret = "secret",
 
+                UserName = "alice",
+                Password = "password",
                 Scope = "api1"
             });
 
@@ -55,6 +67,8 @@ namespace Client
                 var content = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(JArray.Parse(content));
             }
+
+            Console.ReadKey();
         }
     }
 }
