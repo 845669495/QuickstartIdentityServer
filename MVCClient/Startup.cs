@@ -31,7 +31,7 @@ namespace MVCClient
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddMvc();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
 
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
