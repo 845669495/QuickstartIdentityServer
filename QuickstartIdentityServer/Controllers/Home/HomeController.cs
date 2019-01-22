@@ -28,7 +28,7 @@ namespace IdentityServer4.Quickstart.UI
 
         public IActionResult Index()
         {
-            if (_environment.IsDevelopment())
+            //if (_environment.IsDevelopment())
             {
                 // only show in development
                 return View();
