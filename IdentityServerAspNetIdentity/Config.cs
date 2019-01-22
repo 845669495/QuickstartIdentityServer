@@ -7,7 +7,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace QuickstartIdentityServer
+namespace IdentityServerAspNetIdentity
 {
     public class Config
     {
@@ -84,8 +84,8 @@ namespace QuickstartIdentityServer
                     ClientId = "mvc",
                     ClientName = "MVC Client",
                     AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
-
-                    //RequireConsent = false,  //禁用MVC客户端的许可
+                 
+                    RequireConsent = false,  //禁用MVC客户端的许可
 
                     ClientSecrets =
                     {

@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{92B5C67F-929D-4D60-ADE1-4F47BF500245}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCClient", "MVCClient\MVCClient.csproj", "{0AD9DFE6-5337-465D-B83E-8EE28526BF6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCClient", "MVCClient\MVCClient.csproj", "{0AD9DFE6-5337-465D-B83E-8EE28526BF6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServerAspNetIdentity", "IdentityServerAspNetIdentity\IdentityServerAspNetIdentity.csproj", "{F6EAAA3E-5F2E-46C4-BEA5-119DFDDFCDEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0AD9DFE6-5337-465D-B83E-8EE28526BF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AD9DFE6-5337-465D-B83E-8EE28526BF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AD9DFE6-5337-465D-B83E-8EE28526BF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6EAAA3E-5F2E-46C4-BEA5-119DFDDFCDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6EAAA3E-5F2E-46C4-BEA5-119DFDDFCDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6EAAA3E-5F2E-46C4-BEA5-119DFDDFCDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6EAAA3E-5F2E-46C4-BEA5-119DFDDFCDEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
