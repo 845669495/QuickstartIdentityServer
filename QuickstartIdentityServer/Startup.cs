@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.QQ;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -24,6 +25,13 @@ namespace QuickstartIdentityServer
                 .AddInMemoryApiResources(Config.GetApiResources())//添加api资源
                 .AddInMemoryClients(Config.GetClients())//添加客户端
                 .AddTestUsers(Config.GetUsers()); //添加测试用户
+
+            services.AddAuthentication()
+                .AddQQ(qq =>
+                {
+                    qq.AppId = "abc";
+                    qq.AppKey = "abc";
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
