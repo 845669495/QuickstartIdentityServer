@@ -29,8 +29,8 @@ namespace QuickstartIdentityServer
             services.AddAuthentication()
                 .AddQQ(qq =>
                 {
-                    qq.AppId = "abc";
-                    qq.AppKey = "abc";
+                    qq.AppId = "101543795";
+                    qq.AppKey = "3dafebb5bd15c6cb4fe9144758898645";
                 });
         }
 
