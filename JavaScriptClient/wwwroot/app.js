@@ -17,7 +17,8 @@ document.getElementById("api").addEventListener("click", api, false);
 document.getElementById("logout").addEventListener("click", logout, false);
 
 var config = {
-    authority: "http://localhost:5000",
+    //authority: "http://localhost:5000",
+    authority: "http://auth.meiyueshow.com",
     client_id: "js",
     redirect_uri: "http://localhost:5003/callback.html",
     response_type: "id_token token",
