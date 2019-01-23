@@ -39,7 +39,8 @@ namespace MVCClient
             {
                 options.SignInScheme = "Cookies";
 
-                options.Authority = "http://localhost:5000";
+                //options.Authority = "http://localhost:5000";
+                options.Authority = "http://auth.meiyueshow.com";
                 options.RequireHttpsMetadata = false;
 
                 options.ClientId = "mvc";

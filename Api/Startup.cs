@@ -33,7 +33,8 @@ namespace Api
             services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
-                    options.Authority = "http://localhost:5000";
+                    //options.Authority = "http://localhost:5000";
+                    options.Authority = "http://auth.meiyueshow.com";
                     options.RequireHttpsMetadata = false;
 
                     options.Audience = "api1";
