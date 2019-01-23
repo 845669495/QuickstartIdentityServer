@@ -47,12 +47,12 @@ namespace MVCClient
                 options.SaveTokens = true;
 
 
-                //混合流
-                options.ClientSecret = "secret";
-                options.ResponseType = "code id_token";
-                options.GetClaimsFromUserInfoEndpoint = true;
-                options.Scope.Add("api1");
-                options.Scope.Add("offline_access");
+                ////混合流
+                //options.ClientSecret = "secret";
+                //options.ResponseType = "code id_token";
+                //options.GetClaimsFromUserInfoEndpoint = true;
+                //options.Scope.Add("api1");
+                //options.Scope.Add("offline_access");
             });
         }
 

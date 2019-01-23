@@ -60,49 +60,49 @@ namespace QuickstartIdentityServer
                     AllowedScopes = { "api1" }
                 },
                 // OpenID Connect implicit flow client (MVC)
-                //new Client
-                //{
-                //    ClientId = "mvc",
-                //    ClientName = "MVC Client",
-                //    AllowedGrantTypes = GrantTypes.Implicit,
-
-                //    // where to redirect to after login
-                //    RedirectUris = { "http://localhost:5002/signin-oidc" },
-
-                //    // where to redirect to after logout
-                //    PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
-
-                //    AllowedScopes = new List<string>
-                //    {
-                //        IdentityServerConstants.StandardScopes.OpenId,
-                //        IdentityServerConstants.StandardScopes.Profile
-                //    }
-                //},
-                // 混合流
                 new Client
                 {
                     ClientId = "mvc",
                     ClientName = "MVC Client",
-                    AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
+                    AllowedGrantTypes = GrantTypes.Implicit,
 
-                    //RequireConsent = false,  //禁用MVC客户端的许可
+                    // where to redirect to after login
+                    RedirectUris = { "http://localhost:5002/signin-oidc" },
 
-                    ClientSecrets =
-                    {
-                        new Secret("secret".Sha256())
-                    },
-
-                    RedirectUris           = { "http://localhost:5002/signin-oidc" },
+                    // where to redirect to after logout
                     PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
 
-                    AllowedScopes =
+                    AllowedScopes = new List<string>
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile,
-                        "api1"
-                    },
-                    AllowOfflineAccess = true
+                        IdentityServerConstants.StandardScopes.Profile
+                    }
                 },
+                //// 混合流
+                //new Client
+                //{
+                //    ClientId = "mvc",
+                //    ClientName = "MVC Client",
+                //    AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
+
+                //    //RequireConsent = false,  //禁用MVC客户端的许可
+
+                //    ClientSecrets =
+                //    {
+                //        new Secret("secret".Sha256())
+                //    },
+
+                //    RedirectUris           = { "http://localhost:5002/signin-oidc" },
+                //    PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
+
+                //    AllowedScopes =
+                //    {
+                //        IdentityServerConstants.StandardScopes.OpenId,
+                //        IdentityServerConstants.StandardScopes.Profile,
+                //        "api1"
+                //    },
+                //    AllowOfflineAccess = true
+                //},
                 // JavaScript Client
                 new Client
                 {
